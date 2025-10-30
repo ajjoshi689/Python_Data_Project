@@ -42,8 +42,10 @@ from datasets import load_dataset
 import matplotlib.pyplot as plt  
 
 # Loading Data
-dataset = load_dataset('lukebarousse/data_jobs')
-df = dataset['train'].to_pandas()
+#dataset = load_dataset('lukebarousse/data_jobs')
+#df = dataset['train'].to_pandas()
+
+df = pd.read_csv("C:/Users/ishaa/Downloads/job_postings_flat.csv")
 
 # Data Cleanup
 df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])
